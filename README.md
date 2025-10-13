@@ -1,56 +1,59 @@
-A simple Campaign Tracker built with React, Node.js, and MongoDB that lets users add, view, update, and delete marketing campaigns.
+1. Campaign Tracker
 
-Features :
+- A simple web app built with React, Node.js, and MongoDB to manage marketing campaigns. 
+- Users can add, view, update, and delete campaigns, with data stored persistently.
 
--Add a new marketing campaign
+2. Features
 
--View all campaigns in a clean list
+- Add a new marketing campaign
 
--Update campaign status (Active, Paused, Completed)
+- View all campaigns in a list
 
--Delete a campaign
+- Update campaign status (Active, Paused, Completed)
 
-Data stored persistently in MongoDB
+- Delete campaigns
 
-Tech Stack :
+- Persistent storage using MongoDB
 
-Frontend: React, Axios, HTML, CSS
-Backend: Node.js, Express
-Database: MongoDB (Local or MongoDB Atlas)
+3. Tech Stack
 
-Setup Instructions
-1. Clone or Download the Project
-git clone <your_repo_link>
-cd campaign-tracker
+- Frontend: React, Axios, HTML, CSS
 
-2. Setup Backend
-cd backend
-npm install
+- Backend: Node.js, Express
 
+- Database: MongoDB (Local or Atlas)
 
-Create a .env file inside backend/ with your MongoDB connection string:
+4. Setup Instructions
+   
+- Cloning the Project :
+     
+   git clone <repo_link>
+   
+   cd ../campaign-tracker
+  
 
-MONGO_URI=mongodb://127.0.0.1:27017/campaignDB
-PORT=5000
+- Backend Setup :
+  
+   cd ../backend
+  
+   npm install
+  
+   Start the backend:
+  
+   node server.js
 
+- Frontend Setup :
+  
+   cd ../frontend
+  
+   npm install
+  
+   npm start
 
-Start backend:
+5. What I Learned
 
-node server.js
+- How to connect a React frontend with a Node.js backend.
 
+- Implementing CRUD operations and managing state in React.
 
-Server will run on http://localhost:5000
-
-3. Setup Frontend
-cd ../frontend
-npm install
-npm start
-
-
-Frontend will run on http://localhost:3000
-
-
-
-The goal was to build a simple CRUD (Create, Read, Update, Delete) web app connecting a React frontend with a Node.js + MongoDB backend.
-I focused on clear folder structure, simple design, and working functionality.
-Through this task, I strengthened my understanding of REST APIs, React state management, and full-stack data flow.
+- Handling full-stack data flow from UI to database.
