@@ -1,0 +1,289 @@
+/* ============================= */
+/* 🌟 PROFESSIONAL DESIGN SYSTEM */
+/* ============================= */
+
+/* ROOT VARIABLES for standard colors and spacing */
+:root {
+    --color-primary: #4A90E2;      /* Modern Blue */
+    --color-secondary: #50E3C2;    /* Accent Color */
+    --color-text-dark: #333333;
+    --color-text-light: #555555;
+    --color-background-light: #F4F7FC; /* Very subtle light blue/gray background */
+    --color-white: #ffffff;
+    --color-border: #E0E0E0;
+    --color-danger: #D9534F;       /* Red for delete */
+    
+    /* Typography */
+    --font-family: 'Inter', 'Roboto', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+}
+
+/* Global Reset and Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* --- Card Style (Used for Login & Dashboard Sections) --- */
+.card {
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Soft, professional shadow */
+    padding: var(--spacing-lg) 30px;
+    margin-bottom: var(--spacing-lg);
+    transition: box-shadow 0.3s ease;
+}
+
+/* --- Typography & Titles --- */
+.app-title-header {
+    font-size: 1.5em; /* Smaller title in the dashboard header */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.card-title-main {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-dark);
+}
+
+.card-title-small {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+
+/* ============================= */
+/* 🌟 FORM ELEMENTS & INPUTS    */
+/* ============================= */
+
+.form-group {
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-text-light);
+}
+
+.form-control, .form-select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--color-white);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1); /* Subtle focus ring */
+}
+
+/* --- Button Base Styles --- */
+.btn {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #3A7CCF; 
+}
+
+.btn-secondary {
+    background-color: var(--color-border);
+    color: var(--color-text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: #D0D0D0;
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    padding: 8px 12px;
+    font-size: 0.9em;
+    width: auto;
+}
+
+.btn-danger:hover {
+    background-color: #C9302C;
+}
+
+/* ============================= */
+/* 🌟 LOGIN PAGE STYLING         */
+/* ============================= */
+
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-background-light); /* Clean solid background */
+}
+
+.login-card {
+    /* Merged with .card styling, just setting max-width and text-align */
+    max-width: 400px;
+    text-align: left; /* Aligned left for better form structure */
+    padding: 40px;
+}
+
+.login-title {
+    font-size: 2.5em; /* Bigger title on the login page */
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #fff1f0; /* Lighter error color */
+    color: var(--color-danger);
+    border: 1px solid #ffccc7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+
+/* ============================= */
+/* 🌟 DASHBOARD LAYOUT           */
+/* ============================= */
+
+.dashboard-header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9em;
+    color: var(--color-text-light);
+}
+
+.dashboard-content {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- Campaign Form Section --- */
+.campaign-form {
+    display: grid;
+    /* Responsive grid: minimum 150px columns, fills space */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: var(--spacing-md);
+    align-items: end; /* Align button to the bottom of the grid row */
+}
+
+.campaign-form .form-group {
+    margin-bottom: 0; /* Clear default margin for grid items */
+}
+
+.campaign-form .btn-primary {
+    /* Ensure the button fits perfectly in the grid */
+    height: 100%; 
+    padding: 12px;
+}
+
+/* ============================= */
+/* 🌟 TABLE STYLING              */
+/* ============================= */
+
+.table-container {
+    overflow-x: auto; /* Ensures table is responsive */
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    min-width: 600px; /* Minimum width to prevent crushing on small screens */
+}
+
+.table thead th {
+    background-color: #F8F8F8; /* Light header background */
+    font-weight: 600;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    padding: var(--spacing-md);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.table tbody td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: #FAFAFA; /* Subtle hover effect */
+}
+
+.table .status-select {
+    padding: 6px 8px;
+    font-size: 0.9em;
+}
+
+.table .btn-danger {
+    padding: 6px 10px;
+}
+
+.text-right { text-align: right; }
