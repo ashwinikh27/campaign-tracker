@@ -31,11 +31,6 @@ cd campaign-tracker
 cd backend
 npm install
 
-Created a .env file with the following:
-
-MONGO_URI=mongodb://127.0.0.1:27017/campaignDB
-PORT=5000
-
 Start the backend:
 node server.js
 
