@@ -1,56 +1,57 @@
-A simple Campaign Tracker built with React, Node.js, and MongoDB that lets users add, view, update, and delete marketing campaigns.
+1. Campaign Tracker
 
-Features :
+A simple web app built with React, Node.js, and MongoDB to manage marketing campaigns. Users can add, view, update, and delete campaigns, with data stored persistently.
 
--Add a new marketing campaign
+2. Features
 
--View all campaigns in a clean list
+- Add a new marketing campaign
 
--Update campaign status (Active, Paused, Completed)
+- View all campaigns in a list
 
--Delete a campaign
+- Update campaign status (Active, Paused, Completed)
 
-Data stored persistently in MongoDB
+- Delete campaigns
 
-Tech Stack :
+- Persistent storage using MongoDB
 
-Frontend: React, Axios, HTML, CSS
-Backend: Node.js, Express
-Database: MongoDB (Local or MongoDB Atlas)
+3. Tech Stack
 
-Setup Instructions
-1. Clone or Download the Project
+- Frontend: React, Axios, HTML, CSS
+
+- Backend: Node.js, Express
+
+- Database: MongoDB (Local or Atlas)
+
+4. Setup Instructions
+4.1 Clone the Project
 git clone <your_repo_link>
 cd campaign-tracker
 
-2. Setup Backend
+4.2 Backend Setup
 cd backend
 npm install
 
-
-Create a .env file inside backend/ with your MongoDB connection string:
+Created a .env file with the following:
 
 MONGO_URI=mongodb://127.0.0.1:27017/campaignDB
 PORT=5000
 
-
-Start backend:
-
+Start the backend:
 node server.js
 
+Backend will run on http://localhost:5000
 
-Server will run on http://localhost:5000
-
-3. Setup Frontend
+4.3 Frontend Setup
 cd ../frontend
 npm install
 npm start
 
-
 Frontend will run on http://localhost:3000
 
+5. What I Learned
 
+How to connect a React frontend with a Node.js backend.
 
-The goal was to build a simple CRUD (Create, Read, Update, Delete) web app connecting a React frontend with a Node.js + MongoDB backend.
-I focused on clear folder structure, simple design, and working functionality.
-Through this task, I strengthened my understanding of REST APIs, React state management, and full-stack data flow.
+Implementing CRUD operations and managing state in React.
+
+Handling full-stack data flow from UI to database.
