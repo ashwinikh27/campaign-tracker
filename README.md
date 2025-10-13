@@ -1,6 +1,7 @@
 1. Campaign Tracker
 
-   A simple web app built with React, Node.js, and MongoDB to manage marketing campaigns. Users can add, view, update, and delete campaigns, with data stored persistently.
+- A simple web app built with React, Node.js, and MongoDB to manage marketing campaigns.
+- Users can add, view, update, and delete campaigns, with data stored persistently.
 
 2. Features
 
@@ -20,7 +21,7 @@
 
 - Backend: Node.js, Express
 
-- Database: MongoDB (Local or Atlas)
+- Database: MongoDB 
 
 4. Setup Instructions
    
