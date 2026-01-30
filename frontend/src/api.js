@@ -1,7 +1,6 @@
 import axios from 'axios';
-const BASE_URL = 'https://campaign-tracker-wvyu.onrender.com/api';
 
-
+const BASE_URL = 'http://localhost:5000/api';
 
 export const getCampaigns = () => axios.get(`${BASE_URL}/campaigns`);
 export const addCampaign = (data) => axios.post(`${BASE_URL}/campaigns`, data);
