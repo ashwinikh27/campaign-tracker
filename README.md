@@ -1,59 +1,70 @@
-1. Campaign Tracker
+# Campaign Tracker
 
-- A simple web app built with React, Node.js, and MongoDB to manage marketing campaigns. 
+A full-stack web application built using **React, Node.js, Express, and MongoDB** to manage marketing campaigns.
 
-- Users can add, view, update, and delete campaigns, with data stored persistently.
+This project demonstrates full-stack CRUD operations using REST APIs, allowing users to create, view, update, and delete campaigns with persistent data storage.
 
-2. Features
+---
 
-- Add a new marketing campaign
+## Features
 
-- View all campaigns in a list
+- Add new marketing campaigns  
+- View all campaigns in a structured list  
+- Update campaign status (Active, Paused, Completed)  
+- Delete campaigns  
+- Persistent storage using MongoDB  
 
-- Update campaign status (Active, Paused, Completed)
+---
 
-- Delete campaigns
+## Tech Stack
 
-- Persistent storage using MongoDB
+### Frontend
+- React
+- Axios
+- HTML
+- CSS
 
-3. Tech Stack
+### Backend
+- Node.js
+- Express
 
-- Frontend: React, Axios, HTML, CSS
+### Database
+- MongoDB
 
-- Backend: Node.js, Express
+---
 
-- Database: MongoDB 
+## How to Run the Project
 
-4. Setup Instructions
-   
-- Cloning the Project :
-     
-   git clone <repo_link>
-   
-   cd ../campaign-tracker
-  
-- Backend Setup :
-  
-   cd ../backend
-  
-   npm install
-  
-   Start the backend:
-  
-   node server.js
+### 1️⃣ Backend
 
-- Frontend Setup :
-  
-   cd ../frontend
-  
-   npm install
-  
-   npm start
+```bash
+cd backend
+npm install
+node server.js
+```
 
-5. What I Learned
+Runs on: http://localhost:5000
 
-- How to connect a React frontend with a Node.js backend.
+---
 
-- Implementing CRUD operations and managing state in React.
+### 2️⃣ Frontend
 
-- Handling full-stack data flow from UI to database.
+```
+cd frontend
+npm install
+npm start
+```
+
+Runs on: http://localhost:3000
+
+---
+
+## What I Learned
+
+- Connecting a React frontend with a Node.js backend  
+- Implementing CRUD operations  
+- Managing state in React  
+- Handling API requests using Axios  
+- Structuring a full-stack application  
+
+---
