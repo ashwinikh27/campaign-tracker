@@ -4,23 +4,33 @@
 
 /* ROOT VARIABLES for standard colors and spacing */
 :root {
-    --color-primary: #4A90E2;      /* Modern Blue */
-    --color-secondary: #50E3C2;    /* Accent Color */
-    --color-text-dark: #333333;
-    --color-text-light: #555555;
-    --color-background-light: #F4F7FC; /* Very subtle light blue/gray background */
+    --color-primary: #3b82f6;      
+    --color-secondary: #22c55e;    
+    --color-text-dark: #1f2937;
+    --color-text-light: #6b7280;
+    --color-background-light: #eef2f6; 
     --color-white: #ffffff;
-    --color-border: #E0E0E0;
-    --color-danger: #D9534F;       /* Red for delete */
-    
-    /* Typography */
+    --color-border: #d8dee6;
+    --color-danger: #ef4444;       
+
     --font-family: 'Inter', 'Roboto', sans-serif;
-    
-    /* Spacing */
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 15px;
-    --spacing-lg: 20px;
+
+    --spacing-xs: 6px;
+    --spacing-sm: 12px;
+    --spacing-md: 18px;
+    --spacing-lg: 24px;
+}
+
+/* 🌟 Subtle Page Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Global Reset and Typography */
@@ -41,10 +51,16 @@ body {
 .card {
     background: var(--color-white);
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Soft, professional shadow */
-    padding: var(--spacing-lg) 30px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    padding: var(--spacing-lg) 32px;
     margin-bottom: var(--spacing-lg);
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
 }
 
 /* --- Typography & Titles --- */
@@ -94,13 +110,14 @@ body {
     border-radius: 8px;
     font-size: 1em;
     outline: none;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.25s ease;
     background-color: var(--color-white);
 }
 
 .form-control:focus, .form-select:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1); /* Subtle focus ring */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+    transform: scale(1.02);
 }
 
 /* --- Button Base Styles --- */
@@ -111,7 +128,7 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: all 0.25s ease;
 }
 
 .btn-primary {
@@ -120,7 +137,9 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #3A7CCF; 
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(59, 130, 246, 0.35);
 }
 
 .btn-secondary {
@@ -148,45 +167,67 @@ body {
 /* 🌟 LOGIN PAGE STYLING         */
 /* ============================= */
 
+
 .login-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: var(--color-background-light); /* Clean solid background */
 }
 
 .login-card {
-    /* Merged with .card styling, just setting max-width and text-align */
     max-width: 400px;
-    text-align: left; /* Aligned left for better form structure */
-    padding: 40px;
+    width: 100%;
+    padding: 40px 36px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.10);
+    animation: fadeUp 0.6s ease-out;
+    transition: all 0.3s ease;
 }
 
 .login-title {
-    font-size: 2.5em; /* Bigger title on the login page */
-    font-weight: 700;
-    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    color: var(--color-text-dark);
 }
 
 .login-subtitle {
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-lg);
-    font-size: 0.9em;
     text-align: center;
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
 }
 
-.error-message {
-    background-color: #fff1f0; /* Lighter error color */
-    color: var(--color-danger);
-    border: 1px solid #ffccc7;
-    border-radius: 6px;
-    padding: 8px;
-    font-size: 0.9rem;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
+.login-card .form-control {
+    background-color: #f9fafb;
+    border: 1px solid var(--color-border);
+    height: 42px;
+    font-size: 0.95rem;
+}
+
+.login-card .form-control:focus {
+    background-color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.login-card .btn-primary {
+    width: 100%;
+    height: 44px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+}
+
+.login-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.14);
 }
 
 
@@ -194,24 +235,28 @@ body {
 /* 🌟 DASHBOARD LAYOUT           */
 /* ============================= */
 
-.dashboard-header {
-    background-color: var(--color-white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 15px 30px;
+.app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 24px 40px;
+}
+
+.app-header .btn {
+    height: 38px;
+    padding: 0 18px;
+}
+
+.dashboard-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: none;
 }
 
 .user-info {
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 0.9em;
-    color: var(--color-text-light);
+    gap: 16px;
 }
 
 .dashboard-content {
@@ -287,3 +332,4 @@ body {
 }
 
 .text-right { text-align: right; }
+
